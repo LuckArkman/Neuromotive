@@ -118,7 +118,105 @@ namespace Neuromotive.AI.Neural
         }
 
         /// <summary>
-        /// Seleciona o índice da ação com maior probabilidade (Argmax).
+        /// Derivada da função ReLU. 1 se x > 0, senão 0.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 dReLU(float4 x)
+        {
+            return math.select(0.0f, 1.0f, x > 0.0f);
+        }
+
+        /// <summary>
+        /// Derivada da função Sigmoid: f(x) * (1 - f(x)).
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 dSigmoid(float4 x)
+        {
+            float4 s = FastSigmoid(x);
+            return s * (1.0f - s);
+        }
+
+        /// <summary>
+        /// Derivada da função Tanh: 1 - f(x)^2.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 dTanh(float4 x)
+        {
+            float4 t = FastTanh(x);
+            return 1.0f - (t * t);
+        }
+
+        /// <summary>
+        /// Realiza o cálculo do Portão de Esquecimento (Forget Gate) da LSTM.
+        /// Fórmula: f_t = Sigmoid(W_f * [h_prev, x] + b_f)
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 CalculateForgetGate(float4 netInput)
+        {
+            // O netInput já deve ser o resultado da multiplicação matricial (W_f * concat)
+            return FastSigmoid(netInput);
+        }
+
+        /// <summary>
+        /// Realiza o cálculo do Portão de Entrada (Input Gate) da LSTM.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 CalculateInputGate(float4 netInput)
+        {
+            return FastSigmoid(netInput);
+        }
+
+        /// <summary>
+        /// Realiza o cálculo do Estado Candidato (tilde{c}_t) da LSTM.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 CalculateCandidateState(float4 netInput)
+        {
+            return FastTanh(netInput);
+        }
+
+        /// <summary>
+        /// Realiza o cálculo do Portão de Saída (Output Gate) da LSTM.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 CalculateOutputGate(float4 netInput)
+        {
+            return FastSigmoid(netInput);
+        }
+
+        /// <summary>
+        /// Realiza a atualização do Estado de Célula (c_t) da LSTM.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 UpdateLSTMCell(float4 f_t, float4 c_prev, float4 i_t, float4 c_tilde)
+        {
+            // FMA 1: f_t * c_prev
+            float4 forgetPart = f_t * c_prev;
+            // FMA 2: i_t * c_tilde + forgetPart
+            return math.mad(i_t, c_tilde, forgetPart);
+        }
+
+        /// <summary>
+        /// Atualiza o Estado Oculto (h_t) da LSTM.
+        /// Fórmula: h_t = outputGate * Tanh(c_t)
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [BurstCompile]
+        public static float4 UpdateLSTMHidden(float4 o_t, float4 c_t)
+        {
+            return o_t * FastTanh(c_t);
+        }
+
+        /// <summary>
+        /// Helper para o Argmax probabilístico (Gumbel-Softmax lite).
         /// </summary>
         [BurstCompile]
         public static int Argmax(in NativeArray<float> values, int size)

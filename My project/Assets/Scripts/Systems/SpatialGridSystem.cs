@@ -12,43 +12,52 @@ namespace Neuromotive.AI.Systems
     /// Essencial para buscas de vizinhança em O(1) médio.
     /// </summary>
     [UpdateInGroup(typeof(AIPerceptionGroup))]
+    public struct SpatialGridSingleton : IComponentData
+    {
+        public NativeParallelMultiHashMap<int, Entity> Grid;
+        public float CellSize;
+    }
+
     [BurstCompile]
     public partial struct SpatialGridSystem : ISystem
     {
         public static float CellSize = 2.0f;
-        
-        // HashMap que mapeia Hash da célula (int) para a Entidade do Agente.
-        public NativeParallelMultiHashMap<int, Entity> Grid;
 
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            Grid = new NativeParallelMultiHashMap<int, Entity>(2000, Allocator.Persistent);
+            var grid = new NativeParallelMultiHashMap<int, Entity>(2000, Allocator.Persistent);
+            state.EntityManager.CreateSingleton(new SpatialGridSingleton { Grid = grid, CellSize = CellSize });
             state.RequireForUpdate<AgentTransform>();
         }
 
         [BurstCompile]
         public void OnDestroy(ref SystemState state)
         {
-            if (Grid.IsCreated) Grid.Dispose();
+            if (SystemAPI.HasSingleton<SpatialGridSingleton>())
+            {
+                var singleton = SystemAPI.GetSingleton<SpatialGridSingleton>();
+                if (singleton.Grid.IsCreated) singleton.Grid.Dispose();
+            }
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            Grid.Clear();
+            var singleton = SystemAPI.GetSingletonRW<SpatialGridSingleton>();
+            singleton.ValueRW.Grid.Clear();
             
             // Re-estimar capacidade baseada no número de agentes
             var entityQuery = SystemAPI.QueryBuilder().WithAll<AgentTransform>().Build();
-            if (entityQuery.CalculateEntityCount() > Grid.Capacity)
+            if (entityQuery.CalculateEntityCount() > singleton.ValueRO.Grid.Capacity)
             {
-                Grid.Capacity = entityQuery.CalculateEntityCount();
+                singleton.ValueRW.Grid.Capacity = entityQuery.CalculateEntityCount();
             }
 
             // Job para preencher o Grid
             new HashGridJob
             {
-                Grid = Grid.AsParallelWriter(),
+                Grid = singleton.ValueRW.Grid.AsParallelWriter(),
                 CellSize = CellSize
             }.ScheduleParallel();
         }

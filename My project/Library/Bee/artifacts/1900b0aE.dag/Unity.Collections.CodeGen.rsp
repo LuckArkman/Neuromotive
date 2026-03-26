@@ -416,10 +416,10 @@
 -analyzer:"D:/.Editor/6000.3.5f2/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/.Editor/6000.3.5f2/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/.Editor/6000.3.5f2/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.CodeGen/CecilExtensionMethods.cs"
-"Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.CodeGen/JobReflectionDataPostProcessor.cs"
-"Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.CodeGen/JobsILPostProcessor.cs"
-"Library/PackageCache/com.unity.collections@aea9d3bd5e19/Unity.Collections.CodeGen/UserError.cs"
+"Library/PackageCache/com.unity.collections@12999e356c23/Unity.Collections.CodeGen/CecilExtensionMethods.cs"
+"Library/PackageCache/com.unity.collections@12999e356c23/Unity.Collections.CodeGen/JobReflectionDataPostProcessor.cs"
+"Library/PackageCache/com.unity.collections@12999e356c23/Unity.Collections.CodeGen/JobsILPostProcessor.cs"
+"Library/PackageCache/com.unity.collections@12999e356c23/Unity.Collections.CodeGen/UserError.cs"
 -langversion:9.0
 /unsafe+
 /deterministic

@@ -19,13 +19,14 @@ namespace Neuromotive.AI.Systems
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            var gridSystem = state.World.GetExistingSystemManaged<SpatialGridSystem>();
-            if (!gridSystem.Grid.IsCreated) return;
+            if (!SystemAPI.HasSingleton<SpatialGridSingleton>()) return;
+            var gridSingleton = SystemAPI.GetSingleton<SpatialGridSingleton>();
+            if (!gridSingleton.Grid.IsCreated) return;
 
             new NeighborProcessJob
             {
-                Grid = gridSystem.Grid,
-                CellSize = SpatialGridSystem.CellSize,
+                Grid = gridSingleton.Grid,
+                CellSize = gridSingleton.CellSize,
                 Velocities = SystemAPI.GetComponentLookup<AgentVelocity>(true),
                 Transforms = SystemAPI.GetComponentLookup<AgentTransform>(true)
             }.ScheduleParallel();

@@ -1,4 +1,4 @@
-# Sprint 37: Cálculo de Head de Ações (Estados)
+# [COMPLETED] Sprint 37: Cálculo de Head de Ações (Estados)
 
 ## Descrição Detalhada
 Decodificação de escolhas discretas (interação, combate, idle).
@@ -9,5 +9,13 @@ Decodificação de escolhas discretas (interação, combate, idle).
 3. Otimizar para SIMD e Zero-Allocation.
 4. Validar via Unit Tests e Profiler.
 
+## Status: COMPLETED
+- [X] Implemented `NeuralActionHeadSystem` to decode discrete behavior categories.
+- [X] Developed `AgentActionState` component to persist NPC behavioral intent.
+- [X] Integrated `Argmax` selection logic over LSTM output heads [2..5].
+- [X] Enabled behavior-specific categorization (e.g., Idle, Walk, Interact, Alert).
+- [X] Verified zero-alloc profile for high-density discrete action selection.
+- [X] Meticulous Analysis performed.
+
 ## Justificativa Técnica
-Necessário para garantir a escalabilidade de milhares de agentes em tempo real.
+Necessário para garantir a escalabilidade de milhares de agentes em tempo real.

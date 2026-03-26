@@ -54,15 +54,15 @@ namespace Neuromotive.AI.Systems
             }
 
             // Job para preparar os comandos (360 graus distribuídos)
-            new PrepareSensorCommandsJob
+            var prepareHandle = new PrepareSensorCommandsJob
             {
                 Commands = _commands,
                 RayPerAgent = rayPerAgent
-            }.ScheduleParallel();
+            }.ScheduleParallel(state.Dependency);
 
             // Executar o batch de física no Job System
             // O ScheduleBatch retorna um JobHandle que podemos aguardar no próximo sistema ou no final do frame.
-            var physicsHandle = SpherecastCommand.ScheduleBatch(_commands, _results, 1);
+            var physicsHandle = SpherecastCommand.ScheduleBatch(_commands, _results, 1, prepareHandle);
 
             // Job para preencher o buffer de resultados para a IA
             state.Dependency = new CollectSensorResultsJob
@@ -90,7 +90,7 @@ namespace Neuromotive.AI.Systems
                 float3 dir = new float3(math.sin(currentAngle), 0, math.cos(currentAngle));
                 
                 // Rotacionar direção para coincidir com a orientação do agente
-                dir = math.mul(new quaternion(transform.Rotation), dir);
+                dir = math.mul(transform.Rotation, dir);
 
                 Commands[baseIndex + i] = new SpherecastCommand(
                     transform.Position, 
@@ -120,7 +120,7 @@ namespace Neuromotive.AI.Systems
                 buffer.Add(new SensorResultElement
                 {
                     Distance = hit.distance > 0 ? hit.distance : 0,
-                    HitType = hit.collider != null ? 1 : 0 // Implementação simplificada de tipo
+                    HitType = hit.distance > 0 ? 1 : 0 // Tipo simplificado (1 = Obstáculo)
                 });
             }
         }

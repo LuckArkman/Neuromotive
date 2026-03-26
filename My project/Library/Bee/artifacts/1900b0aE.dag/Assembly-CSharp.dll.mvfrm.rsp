@@ -10,6 +10,8 @@ Library\Bee\artifacts\mvdfrm\Unity.Deformations.ref.dll_0B8E4060C82D7501.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Entities.Build.ref.dll_9C39A601DFE4D50F.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Entities.Editor.Properties.ref.dll_4D79DCFE1D0EB555.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Entities.Editor.ref.dll_0BD7E26D08FB3222.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Entities.Graphics.Editor.ref.dll_280BD1F102FF6AF1.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Entities.Graphics.ref.dll_9ACD70B1FAF168C0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Entities.Hybrid.HybridComponents.ref.dll_A6C8C10E4CC52895.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Entities.Hybrid.ref.dll_308F1BEA2367A051.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Entities.UI.Editor.ref.dll_0696D5B935521418.mvfrm
@@ -209,6 +211,6 @@ Library\Bee\artifacts\mvdfrm\UnityEngine.XRModule.dll_04D56F5FBC176D2E.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Android.Gradle.dll_19D73BA4E4397740.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Android.Types.dll_1BBF3E28046B98FC.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.iOS.Extensions.Xcode.dll_A109FEB2D73BD606.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Collections.LowLevel.ILSupport.dll_921D3F57B2557A8B.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Cecil.Awesome.dll_57A2A68D7E003A4D.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Collections.LowLevel.ILSupport.dll_9D5B606A742F0CA3.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Cecil.Awesome.dll_5CB01B6E8E03371D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.Antlr3.Runtime.dll_09E3B58BCA4FB048.mvfrm
