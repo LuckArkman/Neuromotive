@@ -1,4 +1,4 @@
-# Sprint 07: Batching de SphereCast de Física
+# [COMPLETED] Sprint 07: Batching de SphereCast de Física
 
 ## Descrição Detalhada
 Sistema SensorSetupSystem para agendar SpherecastCommands em lote.
@@ -9,5 +9,13 @@ Sistema SensorSetupSystem para agendar SpherecastCommands em lote.
 3. Otimizar para SIMD e Zero-Allocation.
 4. Validar via Unit Tests e Profiler.
 
+## Status: COMPLETED
+- [x] Defined `SensorConfig` and `SensorResultElement` (IBufferElementData).
+- [x] Implemented `SensorSystem` with `SpherecastCommand.ScheduleBatch`.
+- [x] Implemented `PrepareSensorCommandsJob` for parallel ray distribution (360°).
+- [x] Implemented `CollectSensorResultsJob` to update agent buffers from physics results.
+- [x] Ensured Zero-Allocation with `NativeArray<SpherecastCommand>` management.
+- [x] Meticulous Analysis performed.
+
 ## Justificativa Técnica
-Necessário para garantir a escalabilidade de milhares de agentes em tempo real.
+Necessário para garantir a escalabilidade de milhares de agentes em tempo real.

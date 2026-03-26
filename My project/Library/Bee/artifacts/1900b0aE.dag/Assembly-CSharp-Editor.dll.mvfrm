@@ -58,6 +58,16 @@ FullScreenPassRendererFeature
 
 RenderQueueType
 RenderObjects
+FileUtilityHybrid
+Unity
+Entities
+Hybrid
+ReferencedUnityObjects
+SerializeUtilityHybrid
+Serialization
+ResourceMetaData
+ResourceCatalogData
+SceneBoundingVolume
 RayTracingRenderPipelineResources
 UnityEngine
 Rendering

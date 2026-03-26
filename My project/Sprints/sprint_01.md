@@ -1,4 +1,4 @@
-# Sprint 01: Configuração Inicial do Projeto no Unity
+# [COMPLETED] Sprint 01: Configuração Inicial do Projeto no Unity
 
 ## Descrição Detalhada
 Setup do ambiente, versionamento e pacotes base (DOTS, Collections, Mathematics).
@@ -8,6 +8,13 @@ Setup do ambiente, versionamento e pacotes base (DOTS, Collections, Mathematics)
 2. Garantir compatibilidade com Burst Compiler.
 3. Otimizar para SIMD e Zero-Allocation.
 4. Validar via Unit Tests e Profiler.
+
+## Status: COMPLETED
+- [X] Unity 6 Project setup.
+- [X] Added DOTS, Burst, Mathematics, Collections, Physics, Graphics packages.
+- [X] Added UniTask (Cysharp).
+- [X] Added .gitignore.
+- [X] Meticulous Analysis performed.
 
 ## Justificativa Técnica
 Necessário para garantir a escalabilidade de milhares de agentes em tempo real.
