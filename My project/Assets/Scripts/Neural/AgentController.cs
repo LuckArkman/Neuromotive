@@ -4,13 +4,17 @@ using System.Collections.Generic;
 namespace Neural
 {
     /// <summary>
-    /// Controlador do Agente com sistema de exploração por velocidade de descoberta de células.
-    /// Um agente é eliminado se não descobrir células NOVAS do mapa em intervalos regulares.
-    /// Isso torna círculos repetitivos inúteis: após a primeira volta, não há células novas.
+    /// Controlador do Agente com LSTM — sistema de exploração por velocidade de
+    /// descoberta de células.
+    ///
+    /// Mudanças em relação à versão Feed-Forward:
+    ///   • Usa LSTMBrain em vez de NeuralBrain.
+    ///   • A memória LSTM (h, c) é resetada no início de cada vida (ResetMemory).
+    ///   • Os PESOS são herdados do melhor agente da geração anterior via InheritFrom.
     /// </summary>
     public class AgentController : MonoBehaviour
     {
-        public NeuralBrain brain;
+        public LSTMBrain brain;
         public VisionSensor vision;
 
         [Header("Status")]
@@ -22,8 +26,8 @@ namespace Neural
         public float turnSpeed = 180f;
 
         [Header("Exploração por Grid")]
-        public float cellSize      = 5f;    // Tamanho da célula (5x5m)
-        public float rewardPerCell = 100f;  // Fitness por célula nova
+        public float cellSize      = 5f;
+        public float rewardPerCell = 100f;
 
         [Header("Velocidade de Exploração (anti-círculo)")]
         [Tooltip("Intervalo em segundos para verificar o progresso de exploração")]
@@ -31,25 +35,31 @@ namespace Neural
         [Tooltip("Mínimo de células NOVAS que o agente deve descobrir por intervalo")]
         public int   minNewCellsPerInterval   = 2;
 
-        // Sensor thresholds (viewRadius = 10m, val = 1 - dist/10)
-        private const float ThresholdDeath   = 0.975f; // dist < 0.25m → morte
-        private const float ThresholdDanger  = 0.900f; // dist < 1.0m  → sem fitness
-        private const float ThresholdWarning = 0.700f; // dist < 3.0m  → reflexo ativo
+        // ── Thresholds do sensor (viewRadius = 10m) ──────────────────────────
+        private const float ThresholdDeath   = 0.975f;
+        private const float ThresholdDanger  = 0.900f;
+        private const float ThresholdWarning = 0.700f;
 
-        // Controle de exploração
+        // ── Controle de exploração ─────────────────────────────────────────
         private HashSet<Vector2Int> visitedCells    = new HashSet<Vector2Int>();
         private int                 lastCellCount   = 0;
         private float               explorationTimer = 0f;
 
-        /// <summary>Número de células únicas do grid exploradas por este agente.</summary>
+        /// <summary>Número de células únicas exploradas por este agente.</summary>
         public int ExploredCellCount => visitedCells.Count;
 
         // ─────────────────────────────────────────────────────────────────────
 
         void Start()
         {
-            if (brain == null) brain = GetComponent<NeuralBrain>();
+            if (brain == null) brain = GetComponent<LSTMBrain>();
+
+            // Inicializa as 4 camadas LSTM com pesos aleatórios.
+            // (O EvolutionManager sobrescreverá com herança genética logo após.)
             brain.Init();
+
+            // Reset da memória episódica — pesos são mantidos, h/c voltam a 0.
+            brain.ResetMemory();
             visitedCells.Add(GetCurrentCell());
         }
 
@@ -57,123 +67,94 @@ namespace Neural
         {
             if (!isAlive) return;
 
-            // ══════════════════════════════════════════════════════════════
-            // BLOCO 1 — Leitura dos sensores + análise direcional de perigo
-            // ══════════════════════════════════════════════════════════════
+            // ══════════════════════════════════════════════════════════════════
+            // BLOCO 1 — Leitura dos sensores + análise de perigo direcional
+            // ══════════════════════════════════════════════════════════════════
             float[] inputs = vision.GetVisionData();
 
-            float frontThreat = 0f;
-            float rightThreat = 0f;
-            float leftThreat  = 0f;
-            float maxVal      = 0f;
+            float frontThreat = 0f, rightThreat = 0f, leftThreat = 0f, maxVal = 0f;
 
             for (int i = 0; i < inputs.Length; i++)
             {
                 float v = inputs[i];
                 if (v > maxVal) maxVal = v;
 
-                // MORTE IMEDIATA — distância < 0.25m
-                if (v > ThresholdDeath)
-                {
-                    isAlive = false;
-                    return; // Sem fitness
-                }
+                // MORTE IMEDIATA — dist < 0.25m
+                if (v > ThresholdDeath) { isAlive = false; return; }
 
-                // Cone frontal: índices 15, 0, 1, 2
                 if (i == 0 || i == 1 || i == 2 || i == 15)
                     frontThreat = Mathf.Max(frontThreat, v);
-
-                // Semicírculo esquerdo: 8 a 15
                 if (i >= 8 && i <= 15)
-                    leftThreat = Mathf.Max(leftThreat, v);
-
-                // Semicírculo direito: 1 a 7
+                    leftThreat  = Mathf.Max(leftThreat,  v);
                 if (i >= 1 && i <= 7)
                     rightThreat = Mathf.Max(rightThreat, v);
             }
 
-            // ══════════════════════════════════════════════════════════════
-            // BLOCO 2 — Verificação de Velocidade de Exploração (anti-círculo)
-            // A cada N segundos, verifica se o agente descobriu células NOVAS.
-            // Após uma volta completa, não há mais células novas → eliminado.
-            // ══════════════════════════════════════════════════════════════
+            // ══════════════════════════════════════════════════════════════════
+            // BLOCO 2 — Kill Switch de Estagnação (anti-círculo)
+            // ══════════════════════════════════════════════════════════════════
             explorationTimer += Time.fixedDeltaTime;
-
             if (explorationTimer >= explorationCheckInterval)
             {
-                int currentCount = visitedCells.Count;
-                int newCells     = currentCount - lastCellCount;
-
-                if (newCells < minNewCellsPerInterval)
-                {
-                    // Não explorou células novas suficientes → eliminado por estagnação
-                    isAlive = false;
-                    return;
-                }
-
-                lastCellCount    = currentCount;
+                int newCells = visitedCells.Count - lastCellCount;
+                if (newCells < minNewCellsPerInterval) { isAlive = false; return; }
+                lastCellCount    = visitedCells.Count;
                 explorationTimer = 0f;
             }
 
-            // ══════════════════════════════════════════════════════════════
-            // BLOCO 3 — Rede Neural
-            // ══════════════════════════════════════════════════════════════
+            // ══════════════════════════════════════════════════════════════════
+            // BLOCO 3 — Inferência LSTM
+            // A LSTM recebe os 16 sensores e retorna [steerL, steerR, speed].
+            // O estado interno (h,c) é mantido frame a frame — o agente
+            // "lembra" o que viu nos frames anteriores.
+            // ══════════════════════════════════════════════════════════════════
             float[] outputs = brain.Think(inputs);
 
             // outputs[0] = girar esquerda | outputs[1] = girar direita | outputs[2] = velocidade
-            float netSteer = (outputs[1] - outputs[0]);  // -1 a +1
-            float netSpeed =  outputs[2];                 //  0 a 1
+            float netSteer = outputs[1] - outputs[0];  // -1 a +1
+            float netSpeed = outputs[2];               //  0 a  1
 
-            // ══════════════════════════════════════════════════════════════
-            // BLOCO 4 — Reflexo de Evasão (blend com rede neural)
-            // Quanto mais perto do obstáculo, mais o reflexo domina.
-            // Perigo à direita → vira à esquerda (e vice-versa).
-            // ══════════════════════════════════════════════════════════════
-            float reflexSteer   = (leftThreat - rightThreat);
-            float reflexBrake   = frontThreat;
-            float dangerBlend   = Mathf.Clamp01(maxVal / ThresholdWarning);
+            // ══════════════════════════════════════════════════════════════════
+            // BLOCO 4 — Reflexo de Evasão (blend com inferência da LSTM)
+            // ══════════════════════════════════════════════════════════════════
+            float reflexSteer = leftThreat - rightThreat;
+            float reflexBrake = frontThreat;
+            float dangerBlend = Mathf.Clamp01(maxVal / ThresholdWarning);
 
-            float finalSteer    = Mathf.Lerp(netSteer, reflexSteer, dangerBlend);
-            float finalSpeed    = Mathf.Clamp01(netSpeed - reflexBrake * dangerBlend);
-            finalSpeed          = Mathf.Max(finalSpeed, 0.15f); // Velocidade mínima garantida
+            float finalSteer = Mathf.Lerp(netSteer, reflexSteer, dangerBlend);
+            float finalSpeed = Mathf.Clamp01(netSpeed - reflexBrake * dangerBlend);
+            finalSpeed       = Mathf.Max(finalSpeed, 0.15f); // velocidade mínima garantida
 
             transform.Rotate(Vector3.up * finalSteer * turnSpeed * Time.fixedDeltaTime);
             transform.Translate(Vector3.forward * finalSpeed * speed * Time.fixedDeltaTime);
 
-            // ══════════════════════════════════════════════════════════════
+            // ══════════════════════════════════════════════════════════════════
             // BLOCO 5 — Fitness condicional (zero em zona de perigo)
-            // ══════════════════════════════════════════════════════════════
+            // ══════════════════════════════════════════════════════════════════
             if (maxVal <= ThresholdDanger)
             {
-                // Zona Segura: recompensa exploração genuína
                 Vector2Int cell = GetCurrentCell();
                 if (!visitedCells.Contains(cell))
                 {
                     visitedCells.Add(cell);
                     fitness += rewardPerCell;
                 }
-                fitness += Time.fixedDeltaTime * 0.5f; // Bônus de sobrevivência limpa
+                fitness += Time.fixedDeltaTime * 0.5f;
             }
-            // Zona de Perigo/Morte → zero fitness. Não recompensa aproximação.
         }
 
         // ─────────────────────────────────────────────────────────────────────
 
-        Vector2Int GetCurrentCell()
-        {
-            return new Vector2Int(
-                Mathf.FloorToInt(transform.position.x / cellSize),
-                Mathf.FloorToInt(transform.position.z / cellSize)
-            );
-        }
+        Vector2Int GetCurrentCell() => new Vector2Int(
+            Mathf.FloorToInt(transform.position.x / cellSize),
+            Mathf.FloorToInt(transform.position.z / cellSize));
 
         void OnCollisionEnter(Collision col) => CheckCollision(col.gameObject.layer);
         void OnTriggerEnter(Collider other)  => CheckCollision(other.gameObject.layer);
 
         void CheckCollision(int layer)
         {
-            if (((1 << layer) & vision.detectionMask) != 0)
-                isAlive = false;
+            if (((1 << layer) & vision.detectionMask) != 0) isAlive = false;
         }
 
         void OnDrawGizmosSelected()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1337019415429156338}
   - component: {fileID: 5612391460496173756}
   - component: {fileID: 5603346357284641413}
-  - component: {fileID: 3430472965023983929}
+  - component: {fileID: 947149899304048238}
   - component: {fileID: 3381374377069937534}
   - component: {fileID: 5860440567902421143}
   m_Layer: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Neural::Neural.VisionNeuralNetwork
   neuronsPerHiddenLayer: 16
---- !u!114 &3430472965023983929
+--- !u!114 &947149899304048238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,9 +159,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 3125983435147285483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b40428021384194821145bf3d25e364, type: 3}
+  m_Script: {fileID: 11500000, guid: 3273727f4f18a694ab93c389ec26643d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Neural::Neural.NeuralBrain
+  m_EditorClassIdentifier: Assembly-CSharp::Neural.LSTMBrain
+  inputSize: 16
+  hiddenSize: 16
+  outputSize: 16
+  layer1:
+    inputSize: 0
+    hiddenSize: 0
+    Wf: []
+    Wi: []
+    Wg: []
+    Wo: []
+    Uf: []
+    Ui: []
+    Ug: []
+    Uo: []
+    bf: []
+    bi: []
+    bg: []
+    bo: []
+    h: []
+    c: []
+  layer2:
+    inputSize: 0
+    hiddenSize: 0
+    Wf: []
+    Wi: []
+    Wg: []
+    Wo: []
+    Uf: []
+    Ui: []
+    Ug: []
+    Uo: []
+    bf: []
+    bi: []
+    bg: []
+    bo: []
+    h: []
+    c: []
+  denseWeights: []
+  denseBiases: []
 --- !u!114 &3381374377069937534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,10 +213,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9acb2d7d28014f7e95b906a11222f839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Neural::Neural.AgentController
-  brain: {fileID: 3430472965023983929}
+  brain: {fileID: 947149899304048238}
   vision: {fileID: 5612391460496173756}
   fitness: 0
   isAlive: 1
+  speed: 5
+  turnSpeed: 180
+  cellSize: 5
+  rewardPerCell: 100
+  explorationCheckInterval: 6
+  minNewCellsPerInterval: 2
 --- !u!54 &5860440567902421143
 Rigidbody:
   m_ObjectHideFlags: 0
