@@ -139,6 +139,12 @@
 -define:NMC_CAN_ACCESS_TERRAIN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll"
+-r:"Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll"
+-r:"Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll"
+-r:"Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll"
+-r:"Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll"
+-r:"Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll"
 -r:"D:/.Editor/6000.3.5f2/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/.Editor/6000.3.5f2/Editor/Data/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
 -r:"D:/.Editor/6000.3.5f2/Editor/Data/Managed/UnityEngine/UnityEditor.AdaptivePerformanceModule.dll"
