@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 947149899304048238}
   - component: {fileID: 3381374377069937534}
   - component: {fileID: 5860440567902421143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +137,9 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 8
+  _npcMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &5603346357284641413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +186,40 @@ MonoBehaviour:
     h: []
     c: []
   layer2:
+    inputSize: 0
+    hiddenSize: 0
+    Wf: []
+    Wi: []
+    Wg: []
+    Wo: []
+    Uf: []
+    Ui: []
+    Ug: []
+    Uo: []
+    bf: []
+    bi: []
+    bg: []
+    bo: []
+    h: []
+    c: []
+  layer3:
+    inputSize: 0
+    hiddenSize: 0
+    Wf: []
+    Wi: []
+    Wg: []
+    Wo: []
+    Uf: []
+    Ui: []
+    Ug: []
+    Uo: []
+    bf: []
+    bi: []
+    bg: []
+    bo: []
+    h: []
+    c: []
+  layer4:
     inputSize: 0
     hiddenSize: 0
     Wf: []

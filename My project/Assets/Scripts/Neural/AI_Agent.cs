@@ -8,8 +8,9 @@ namespace Neural
         public VisionNeuralNetwork brain;
 
         [Header("Movimentação")]
-        public float speed = 5f;
+        public float speed = 7.0f;
         public float rotationSpeed = 100f;
+        public float maxValue = -1;
 
         void FixedUpdate()
         {
@@ -31,23 +32,23 @@ namespace Neural
         
             // Vamos usar a saída mais forte para decidir a rotação
             int bestActionIndex = 0;
-            float maxValue = -1;
+            maxValue = -1;
 
             for (int i = 0; i < outputs.Length; i++)
             {
                 if (outputs[i] > maxValue)
                 {
-                    maxValue = outputs[i];
+                    maxValue = outputs[i] * 1.5f;
                     bestActionIndex = i;
                 }
             }
 
             // Se a ação 0-7 for escolhida, gira para um lado, se 8-15 gira para outro
             float rotationForce = (bestActionIndex < 8) ? -1f : 1f;
-            transform.Rotate(Vector3.up * rotationForce * rotationSpeed * Time.fixedDeltaTime);
+            transform.Rotate(Vector3.up * rotationForce * rotationSpeed * Time.deltaTime);
         
             // Move sempre para frente proporcional à "confiança" da rede
-            transform.Translate(Vector3.forward * speed * maxValue * Time.fixedDeltaTime);
+            transform.Translate(Vector3.forward * speed * maxValue * Time.deltaTime);
         }
     }
 }
