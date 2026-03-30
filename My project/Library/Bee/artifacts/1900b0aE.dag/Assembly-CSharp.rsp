@@ -475,6 +475,7 @@
 "Assets/Scripts/Neural/BrainSaveData.cs"
 "Assets/Scripts/Neural/LayerSaveData.cs"
 "Assets/Scripts/Neural/LSTMBrain.cs"
+"Assets/Scripts/Neural/LSTMCell.cs"
 "Assets/Scripts/Neural/LSTMSaveData.cs"
 "Assets/Scripts/Neural/NeuralBrain.cs"
 "Assets/Scripts/Neural/Neuron.cs"
