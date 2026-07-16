@@ -1,25 +1,28 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: D:/Neuromotive/My project/Packages/manifest.json
+    m_FilePath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+      project/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639100849814055998
-    m_Hash: 2438020503
+      ticks: 639103447430000000
+    m_Hash: 894742124
   m_LockFileStatus:
-    m_FilePath: D:/Neuromotive/My project/Packages/packages-lock.json
+    m_FilePath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+      project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639100850163653334
-    m_Hash: 1354096815
+      ticks: 639103447430000000
+    m_Hash: 3035263049
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: D:/Neuromotive/My project/Packages
+m_ProjectPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+  project/Packages
 m_EditorVersion: 6000.3.5f2 (3fa8bc678cb0)
 m_ResolvedPackages:
 - packageId: com.unity.ai.navigation@2.0.9
@@ -27,7 +30,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.9
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.ai.navigation@5218e4bf7edc
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.ai.navigation@5218e4bf7edc
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -69,12 +73,16 @@ m_ResolvedPackages:
     - 2.0.10
     - 2.0.11
     - 2.0.12
+    - 2.0.13
+    - 2.0.14
     compatible:
     - 2.0.9
     - 2.0.10
     - 2.0.11
     - 2.0.12
-    recommended: 2.0.12
+    - 2.0.13
+    - 2.0.14
+    recommended: 2.0.14
     deprecated: []
   dependencies:
   - name: com.unity.modules.ai
@@ -177,7 +185,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.11.2
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.collab-proxy@1ec4e416a4af
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -282,11 +291,13 @@ m_ResolvedPackages:
     - 2.11.3
     - 2.11.4
     - 2.12.4
+    - 2.13.3
     compatible:
     - 2.11.2
     - 2.11.3
     - 2.11.4
     - 2.12.4
+    - 2.13.3
     recommended: 2.11.4
     deprecated: []
   dependencies: []
@@ -388,7 +399,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.38
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.ide.rider@1f60b3138684
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.ide.rider@1f60b3138684
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -453,10 +465,12 @@ m_ResolvedPackages:
     - 3.0.37
     - 3.0.38
     - 3.0.39
+    - 3.0.40
     compatible:
     - 3.0.38
     - 3.0.39
-    recommended: 3.0.39
+    - 3.0.40
+    recommended: 3.0.40
     deprecated:
     - 3.0.37
   dependencies:
@@ -532,7 +546,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.26
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -661,7 +676,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.17.0
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.inputsystem@02433b2481ab
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.inputsystem@02433b2481ab
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -846,7 +862,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.multiplayer.center@53ad5a5c2bfb
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -937,7 +954,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: f01f4ba8d00afa4e957bddf0fcd1612a564401ff
+  fingerprint: 53ad5a5c2bfb024bdca1188770c49ab70cef8c69
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.1
@@ -953,7 +970,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 17.3.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.render-pipelines.universal@1e87cf1dccb8
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.render-pipelines.universal@f5957b19e230
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal Render Pipeline
@@ -1073,7 +1091,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 1e87cf1dccb843c76f715e529818d2d3a89e78ed
+  fingerprint: f5957b19e230b9e9aa23159e02551775d8e74ce8
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.3.0
@@ -1089,7 +1107,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.6.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.test-framework@353f8d76a670
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -1174,7 +1193,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 0b7a23ab2e1d74441a5afdffa63f417929756957
+  fingerprint: 353f8d76a67063839e86a3fcbe8f74ca3eae4093
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.6.0
@@ -1190,7 +1209,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.10
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.timeline@7f8b2fb101b6
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.timeline@7f8b2fb101b6
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1395,7 +1415,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.ugui@1890c14c96ff
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.ugui@2cf026d064cd
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: uGUI
@@ -1486,7 +1507,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 1890c14c96ff76161b5301b2798bcfba3176042a
+  fingerprint: 2cf026d064cd01d1749f0f423ab4368b8116e484
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
@@ -1502,7 +1523,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.9
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.visualscripting@191c0d7e3b69
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1644,7 +1666,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.accessibility
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -1732,7 +1755,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.adaptiveperformance
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.adaptiveperformance
   assetPath: Packages/com.unity.modules.adaptiveperformance
   name: com.unity.modules.adaptiveperformance
   displayName: Adaptive Performance
@@ -1826,7 +1850,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.ai
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1914,7 +1939,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.androidjni
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -2001,7 +2027,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.animation
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -2089,7 +2116,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.assetbundle
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -2177,7 +2205,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.audio
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -2265,7 +2294,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.cloth
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.cloth
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -2357,7 +2387,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.director
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2453,7 +2484,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.imageconversion
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2541,7 +2573,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.imgui
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2629,7 +2662,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.jsonserialize
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2717,7 +2751,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.particlesystem
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2805,7 +2840,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.physics
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2893,7 +2929,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.physics2d
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2981,7 +3018,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.screencapture
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.screencapture
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -3073,7 +3111,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.terrain
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -3161,7 +3200,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.terrainphysics
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -3257,7 +3297,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.tilemap
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -3348,7 +3389,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.ui
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -3436,7 +3478,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.uielements
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -3544,7 +3587,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.umbra
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3632,7 +3676,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.unityanalytics
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.unityanalytics
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3727,7 +3772,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.unitywebrequest
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3815,7 +3861,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3911,7 +3958,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.unitywebrequestaudio
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -4007,7 +4055,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.unitywebrequesttexture
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -4103,7 +4152,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.unitywebrequestwww
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -4215,7 +4265,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.vectorgraphics
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.vectorgraphics
   assetPath: Packages/com.unity.modules.vectorgraphics
   name: com.unity.modules.vectorgraphics
   displayName: Vector Graphics
@@ -4322,7 +4373,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.vehicles
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.vehicles
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -4414,7 +4466,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.video
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.video
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -4514,7 +4567,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.vr
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.vr
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -4617,7 +4671,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.wind
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.wind
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -4705,7 +4760,8 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.xr
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.xr
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -4805,7 +4861,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.subsystems
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.subsystems
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -4897,7 +4954,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.modules.hierarchycore
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -4985,7 +5043,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.ext.nunit@ec2d0043d6fc
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -5060,7 +5119,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: d8c07649098d3936da4c8ab500960c1776b44592
+  fingerprint: ec2d0043d6fc7a6d17671dfca00f9c303b1d735f
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.5
@@ -5076,7 +5135,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.3.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.render-pipelines.core@ce614113b3ba
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.render-pipelines.core@b95ec4f657bc
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Scriptable Render Pipeline Core
@@ -5193,7 +5253,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: ce614113b3ba4f5c450f963a90b948adc63aab72
+  fingerprint: b95ec4f657bc594585f3fb7a92a2c5ed02ae43d7
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.3.0
@@ -5209,7 +5269,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.3.0
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.shadergraph@ea01319cfd98
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.shadergraph@e5423e5d0d2a
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -5318,7 +5379,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: ea01319cfd98ad2770b5f3cb7a04cb6c22cff99e
+  fingerprint: e5423e5d0d2a3cd3ba5c286f525dcd696ac89609
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.3.0
@@ -5334,7 +5395,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.render-pipelines.universal-config@8dc1aab4af1d
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.render-pipelines.universal-config@dbe3fd082d8f
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal Render Pipeline Config
@@ -5435,7 +5497,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 8dc1aab4af1d718781689a36ed5231a35ad1a524
+  fingerprint: dbe3fd082d8fb31428ea5de3e6074910576c83c9
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -5451,7 +5513,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.9.4
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.searcher@d45a78918735
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.searcher@d45a78918735
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -5559,7 +5622,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.27
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.burst@973857688024
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.burst@973857688024
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -5717,10 +5781,12 @@ m_ResolvedPackages:
     - 1.8.26
     - 1.8.27
     - 1.8.28
+    - 1.8.29
     compatible:
     - 1.8.27
     - 1.8.28
-    recommended: 1.8.28
+    - 1.8.29
+    recommended: 1.8.29
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -5802,7 +5868,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.3
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.mathematics@19a9377c4ffa
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -5913,7 +5980,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.6.2
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.collections@aea9d3bd5e19
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.collections@aea9d3bd5e19
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -6009,12 +6077,16 @@ m_ResolvedPackages:
     - 2.6.3
     - 2.6.4
     - 2.6.5
+    - 2.6.6
+    - 2.6.7
     compatible:
     - 2.6.2
     - 2.6.3
     - 2.6.4
     - 2.6.5
-    recommended: 2.6.5
+    - 2.6.6
+    - 2.6.7
+    recommended: 2.6.7
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -6114,7 +6186,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.6
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6219,7 +6292,8 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.2.0
   source: 1
-  resolvedPath: D:\Neuromotive\My project\Library\PackageCache\com.unity.test-framework.performance@0840f58e4562
+  resolvedPath: /run/media/mplopes/e6d01939-797f-47f0-95de-0f0400fa448e/Neuromotive/My
+    project/Library/PackageCache/com.unity.test-framework.performance@0840f58e4562
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
@@ -6290,11 +6364,17 @@ m_ResolvedPackages:
     - 3.2.1
     - 3.3.0
     - 3.4.0
+    - 3.4.1
+    - 3.4.2
+    - 3.5.0
     compatible:
     - 3.2.0
     - 3.2.1
     - 3.3.0
     - 3.4.0
+    - 3.4.1
+    - 3.4.2
+    - 3.5.0
     recommended: 3.2.1
     deprecated: []
   dependencies:
@@ -6374,4 +6454,4 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-m_BuiltInPackagesHash: e5a71c850bbbf3d88c23e2c1ad154f10d6ff0557
+m_BuiltInPackagesHash: 9b5ab1c9537618eeb87745ce522fb65fcb117528
