@@ -1024,8 +1024,8 @@ MonoBehaviour:
   agentPrefab: {fileID: 3125983435147285483, guid: 55a36882f30e0024e8edbaf2f9f6698b, type: 3}
   spawnPoint: {fileID: 1893143925}
   populationSize: 50
-  mutationRate: 0.15
-  mutationAmount: 0.2
+  mutationRate: 0.01
+  mutationAmount: 0.025
   generationCount: 1
   BestFitnessEver: 0
   timer: 0
